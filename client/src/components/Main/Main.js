@@ -19,7 +19,7 @@ const Main = (props) => {
         props.history.push(`/room/${roomName}`);
       } else {
         setErr(error);
-        setErrMsg('User name already exist');
+        setErrMsg('이미 회의에 참여중인 닉네임입니다.');
       }
     });
   }, [props.history]);
@@ -30,7 +30,7 @@ const Main = (props) => {
 
     if (!roomName || !userName) {
       setErr(true);
-      setErrMsg('Enter Room Name or User Name');
+      setErrMsg('모든 항목을 입력해주세요.');
     } else {
       socket.emit('BE-check-user', { roomId: roomName, userName });
     }
@@ -39,11 +39,11 @@ const Main = (props) => {
   return (
     <MainContainer>
       <Row>
-        <Label htmlFor="roomName">Room Name</Label>
+        <Label htmlFor="roomName">수업코드</Label>
         <Input type="text" id="roomName" ref={roomRef} />
       </Row>
       <Row>
-        <Label htmlFor="userName">User Name</Label>
+        <Label htmlFor="userName">이름</Label>
         <Input type="text" id="userName" ref={userRef} />
       </Row>
       <JoinButton onClick={clickJoin}> Join </JoinButton>
