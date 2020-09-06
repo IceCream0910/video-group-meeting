@@ -20,7 +20,7 @@ const BottomBar = ({
               <FaIcon className="fas fa-video-slash"></FaIcon>
             )}
           </div>
-          Camera
+          카메라
         </CameraButton>
         <CameraButton onClick={toggleCameraAudio} data-switch="audio">
           <div>
@@ -30,7 +30,7 @@ const BottomBar = ({
               <FaIcon className="fas fa-microphone-slash"></FaIcon>
             )}
           </div>
-          Audio
+          마이크
         </CameraButton>
       </Left>
       <Center>
@@ -38,7 +38,7 @@ const BottomBar = ({
           <div>
             <FaIcon className="fas fa-comments"></FaIcon>
           </div>
-          Chat
+          채팅
         </ChatButton>
         <ScreenButton onClick={clickScreenSharing}>
           <div>
@@ -46,11 +46,11 @@ const BottomBar = ({
               className={`fas fa-desktop ${screenShare ? 'sharing' : ''}`}
             ></FaIcon>
           </div>
-          Share Screen
+          화면 공유
         </ScreenButton>
       </Center>
       <Right>
-        <StopButton onClick={goToBack}>Stop</StopButton>
+        <StopButton onClick={goToBack}>나가기</StopButton>
       </Right>
     </Bar>
   );
