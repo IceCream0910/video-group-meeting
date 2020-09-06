@@ -34,7 +34,7 @@ const Chat = ({ display, roomId }) => {
 
   return (
     <ChatContainer className={display ? '' : 'width0'}>
-      <TopHeader>Group Chat Room</TopHeader>
+      <TopHeader>채팅</TopHeader>
       <ChatArea>
         <MessageList>
           {msg &&
